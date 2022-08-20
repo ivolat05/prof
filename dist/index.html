@@ -23,16 +23,788 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	
-	<title>HomePage</title>
+	<title>Врач телемедицины</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 	
-	<div class="header header--fix" id='header'>
-	    <h1 class='header__title'>HomePage </h1>
-	    <a href="#" class="btn">login</a>
+	<div class="page">
+		<header class="header">
+			<div class="container">
+				<div class="header-wrapp">
+					<ul class="header-list">
+						<li class="header-list-inner">
+							<a href="#" class="header-list-link">
+								<img width="32" height="32" src="./img/header/logo.svg" alt="" class="header-list-img">
+							</a>
+						</li>
+						<li class="header-list-inner">
+							<a href="#" class="header-list-link">
+								<img width="28" height="32" src="./img/header/logo-2.svg" alt="" class="header-list-img">
+							</a>
+						</li>
+						<li class="header-list-inner">
+							<a href="#" class="header-list-link">
+								Профпробы
+							</a>
+						</li>
+						<li class="header-list-inner">
+							Врач телемедицины
+						</li>
+					</ul>
+					<div class="header-col">
+						<ul class="header-nav">
+							<li class="header-nav-inner">
+								Теория
+							</li>
+							<li class="header-nav-inner">
+								Задание
+							</li>
+							<li class="header-nav-inner --active">
+								Практика
+							</li>
+							<li class="header-nav-inner">
+								Финал
+							</li>
+						</ul>
+						<div class="header-timer">
+							Осталось 18:45
+						</div>
+						<a href="#" class="header-btn">
+							Справочник
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="container">
+				<div class="main-wrap">
+					<div class="main-box">
+						<div class="main-box-head">
+							<div class="avatar-box">
+								<img src="./img/main/patient.png" alt="" class="avatar">
+							</div>
+							<div class="main-box-coll">
+								<h3 class="patient-name">
+									Пациент Штро Анна
+								</h3>
+								<div class="main-box-row">
+									<ul class="main-list">
+										<li class="main-list-inner --status">
+											онлайн
+										</li>
+										<li class="main-list-inner">
+											первое обращение
+										</li>
+									</ul>
+									<div class="cart-number">
+										Медицинская карта №345-6347
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-chat">
+		
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:12
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Здравствуйте, доктор. Кажется, я заболела
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:14
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Здравствуйте! Я врач-терапевт, добро пожаловать на онлайн-консультацию. Скажите,
+										пожалуйста, что вас беспокоит?
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:16
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Я нехорошо себя чувствую, похоже на простуду.<br>
+										Скажите, пожалуйста, что делать?
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:18
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Скажите, пожалуйста, поднималась ли у вас температура?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:20
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Меня знобит, температура 37,5.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:22
+										</div>
+									</div>
+									<div class="main-chat-text">
+										А горло у вас болит? Есть ли боли при глотании?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:24
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Да, горло болит, глотать немного больно.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:26
+										</div>
+									</div>
+									<div class="main-chat-text">
+										А есть ли у вас кашель, затруднения при дыхании, боли в груди?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:28
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Кашля нет, дышу хорошо.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:30
+										</div>
+									</div>
+									<div class="main-chat-text">
+										У вас есть насморк, заложенность носа или подобные жалобы?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:32
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Да, из носа течёт ручьём, иногда он заложен.
+									</div>
+								</div>
+							</div>
+		
+		
+		
+							<!--сбор-->
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:34
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Скажите, пожалуйста, у вас голова не болит? Уши не беспокоят?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:36
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Голова не болит, с ушами тоже всё в порядке.
+									</div>
+								</div>
+							</div>
+							<!--modal-->
+							<div class="main-chat-inner">
+								<a href="#" class="main-chat-link">
+									сбор анамнеза
+								</a>
+							</div>
+		
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:38
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Когда вы заболели? С чем-нибудь связываете появление ваших жалоб?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:40
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Думаю, вчера. Я гуляла под дождём и промокла.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:42
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Подскажите, а вы уже обращались к какому-нибудь врачу? Что-то делали для улучшения
+										самочувствия?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:44
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Нет, никуда не ходила — только сидела дома и пила чай с лимоном.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:46
+										</div>
+									</div>
+									<div class="main-chat-text">
+										А кто-то ещё у вас дома болеет? Может, вы ходили куда-то, где вас могли заразить?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:48
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Нет, я работаю из дома и никуда не ездила. Из близких тоже никто не болеет.
+									</div>
+								</div>
+							</div>
+		
+							<!--сбор-->
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:50
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Скажите, пожалуйста, есть ли у вас хронические заболевания, аллергии, принимаете ли вы
+										какие-то лекарства?
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:52
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Нет, хронических заболеваний нет, аллергии нет.
+									</div>
+								</div>
+							</div>
+							<!--modal-->
+							<div class="main-chat-inner">
+								<a href="#" class="main-chat-link">
+									Заполнить медкарту
+								</a>
+							</div>
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:54
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Анна, так как у нас удалённый приём, мне нужна будет ваша помощь в осмотре. Могу ли я
+										вас попросить сфотографировать горло? Для этого широко откройте рот, расслабьте язык,
+										поднести камеру к нёбу и сделайте фото со вспышкой.
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											10:56
+										</div>
+									</div>
+									<div class="main-chat-text">
+										<img class="main-chat-img" src="./img/main/foto.jpg" alt="">
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-inner">
+								<label class="main-label">
+									<input type="radio" name="diagnoz" class="main-label-inpt">
+									<span class="main-label-span">
+										Вероятно, это ангина
+									</span>
+								</label>
+							</div>
+		
+							<div class="main-chat-error">
+								<div class="main-error-row">
+									<div class="main-error-coll">
+										<h3 class="main-error-title">
+											Судя по симптомам, это не ангина
+										</h3>
+										<p class="main-error-text">
+											Симптоматику заболевания можно найти в справочнике.
+		
+										</p>
+										<p class="main-error-text">
+											Выберите другое действие
+										</p>
+									</div>
+									<div class="avatar-box">
+										<img src="./img/main/error.png" alt="" class="avatar">
+									</div>
+								</div>
+		
+		
+							</div>
+		
+							<div class="main-chat-inner">
+								<label class="main-label">
+									<input type="radio" name="diagnoz" class="main-label-inpt">
+									<span class="main-label-span">
+										Вероятно, это фарингит
+									</span>
+								</label>
+							</div>
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:58
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Ваши симптомы скорее всего связаны с острой респираторной вирусной инфекцией: острый
+										назофарингит.
+									</div>
+								</div>
+							</div>
+		
+		
+		
+							<div class="main-chat-inner">
+								<label class="main-label">
+									<input type="radio" name="diagnoz" class="main-label-inpt">
+									<span class="main-label-span">
+										Общие рекомендации
+									</span>
+								</label>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											11:00
+										</div>
+									</div>
+									<div class="main-chat-text">
+										В таких случаях обычно используют:
+										<ul class="main-cht-list">
+											<li class="main-cht-inner">
+												- полупостельный режим;
+											</li>
+											<li class="main-cht-inner">
+												- контроль температуры 2 раз в день;
+											</li>
+											<li class="main-cht-inner">
+												- обильное теплое питье 2-3 литра в сутки;
+											</li>
+											<li class="main-cht-inner">
+												- при температуре выше 38,5 °С или выраженной головной боли, боли в мышцах:
+												парацетамол
+												или ибупрофен;
+											</li>
+											<li class="main-cht-inner">
+												- при насморке: сосудосуживающие препараты, но не более 5-7 дней;
+											</li>
+											<li class="main-cht-inner">
+												- от боли в горле: антисептические спреи и пастилки.
+											</li>
+										</ul>
+									</div>
+								</div>
+		
+							</div>
+							<div class="main-chat-inner">
+								<label class="main-label">
+									<input type="radio" name="diagnoz" class="main-label-inpt">
+									<span class="main-label-span">
+										Сходить на очный приём
+									</span>
+								</label>
+							</div>
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											11:02
+										</div>
+									</div>
+									<div class="main-chat-text">
+										При ухудшении общего самочувствия вы можете обратиться к доктору очно или вызвать
+										врача на дом.
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											11:06
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Анна, я могу вам предложить повторную консультацию через 3 дня, чтобы мы
+										проконтролировали ваше самочувствие.
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											11:08
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Да, давайте!
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											11:10
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Хорошо, буду ждать вас. Выздоравливайте!
+									</div>
+								</div>
+							</div>
+							<div class="main-chat-row --patient">
+								<div class="avatar-box">
+									<img src="./img/main/patient.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Пациент Штро Анна
+										</div>
+										<div class="main-chat-time">
+											11:12
+										</div>
+									</div>
+									<div class="main-chat-text">
+										Спасибо, до свидания!
+									</div>
+								</div>
+							</div>
+		
+							<div class="main-chat-footer">
+								<div class="main-footer-coll">
+									<h3 class="main-footer-title">
+										Вы молодец!
+									</h3>
+									<p class="man-footer-text">
+										Пациент получил правильные рекомендации
+										и скоро пойдёт на поправку
+									</p>
+								</div>
+								<div class="main-footer-coll-2">
+									<img src="./img/main/main-1.png" alt="" class="main-footer-img">
+									<a href="#" class="main-chat-end">
+										К следующему пациенту
+									</a>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+					<div class="main-panel">
+						<div class="main-panel-head">
+							<h3 class="main-head-title">
+								Выберите действие
+							</h3>
+							<p class="main-head-text">
+								Не знаете, что делать? Загляните в справочник
+							</p>
+						</div>
+						<div class="main-panel-body"></div>
+					</div>
+				</div>
+		</main>
 	</div>
+	
 	<script src="js/app.min.js"></script>
 </body>
 
