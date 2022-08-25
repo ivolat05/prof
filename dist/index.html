@@ -56,10 +56,16 @@
 					<div class="header-col">
 						<ul class="header-nav">
 							<li class="header-nav-inner">
-								Теория
+								<a href="#" class="header-nav-link">
+									Теория
+								</a>
+		
 							</li>
 							<li class="header-nav-inner">
-								Задание
+								<a href="#" class="header-nav-link">
+									Задание
+								</a>
+		
 							</li>
 							<li class="header-nav-inner --active">
 								Практика
@@ -69,9 +75,22 @@
 							</li>
 						</ul>
 						<div class="header-timer">
-							Осталось 18:45
+							Осталось
+							<span class="header-timer-container">
+								<span class="header-time-box --minut">20</span>:
+								<span class="header-time-box --second">00</span></span>
+							<div class="window header-timer-window">
+								<img src="./img/window.svg" alt="" class="window-img">
+								<div class="window-coll">
+									<span class="window-title">
+										Это таймер.
+									</span>
+									Когда время закончится,<br>
+									вы сможете завершить прохождение профпробы
+								</div>
+							</div>
 						</div>
-						<a href="#" class="header-btn">
+						<a href="#medical-card" class="header-btn open-modal">
 							Справочник
 						</a>
 					</div>
@@ -105,8 +124,18 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-chat scroll">
-		
+						<div class="main-chat ">
+							<div class="window main-chat--start --active">
+								<img src="./img/window.svg" alt="" class="window-img">
+								<div class="window-coll">
+									<span class="window-title">
+										Добро пожаловать в профпробы проекта «Билет в будущее».
+									</span><br>
+									Сделано совместно с Министерством просвещения РФ<br> и командой «Проектория Медиа». И да
+									прибудет с вами<br>
+									профориентация!
+								</div>
+							</div>
 							<div class="main-chat-row --patient">
 								<div class="avatar-box">
 									<img src="./img/main/patient.png" alt="" class="avatar">
@@ -125,7 +154,25 @@
 									</div>
 								</div>
 							</div>
-		
+							<!--Врач печатает-->
+							<div class="main-chat-row --doctor">
+								<div class="avatar-box">
+									<img src="./img/main/doctor.png" alt="" class="avatar">
+								</div>
+								<div class="main-chat-coll">
+									<div class="main-chat-head">
+										<div class="main-chat-name">
+											Врач
+										</div>
+										<div class="main-chat-time">
+											10:14
+										</div>
+									</div>
+									<div class="main-chat-text main-dots-box">
+										Печатает <span class="main-dots">...</span>
+									</div>
+								</div>
+							</div>
 							<div class="main-chat-row --doctor">
 								<div class="avatar-box">
 									<img src="./img/main/doctor.png" alt="" class="avatar">
@@ -145,6 +192,7 @@
 									</div>
 								</div>
 							</div>
+		
 		
 							<div class="main-chat-row --patient">
 								<div class="avatar-box">
@@ -799,7 +847,7 @@
 								Не знаете, что делать? Загляните в справочник
 							</p>
 						</div>
-						<div class="main-panel-body scroll">
+						<div class="main-panel-body ">
 		
 		
 							<div class="accardion">
@@ -875,10 +923,9 @@
 								</div>
 							</div>
 		
-							<a href="#medical-card" class="main-panel-link open-modal  --blue">
+							<button class="main-panel-btn --blue">
 								Заполнить медкарту 0/2
-							</a>
-		
+							</button>
 							<div class="accardion">
 								<button class="accardion-head  --blue">
 									<span class="accardion-head-span">
@@ -911,7 +958,7 @@
 								</div>
 							</div>
 							<div class="accardion">
-								<button class="accardion-head ">
+								<button class="accardion-head --back-color">
 									<span class="accardion-head-span">
 										Собрать анамнез 0/4
 									</span>
@@ -952,7 +999,7 @@
 									</div>
 								</div>
 							</div>
-							<button class="main-panel-btn">
+							<button class="main-panel-btn  --back-color">
 								Запросить фотографию горла 0/1
 							</button>
 		
@@ -1109,29 +1156,9 @@
 		<img src="./img/window.svg" alt="" class="window-img">
 		<div class="window-coll">
 			<span class="window-title">
-				Добро пожаловать в профпробы проекта «Билет в будущее».
-			</span><br>
-			Сделано совместно с Министерством просвещения РФ<br> и командой «Проектория Медиа». И да прибудет с вами<br>
-			профориентация!
-		</div>
-	</div>
-	<div class="window">
-		<img src="./img/window.svg" alt="" class="window-img">
-		<div class="window-coll">
-			<span class="window-title">
 				Это действие сейчас недоступно.
 			</span>
 			Если не знаете, какой шаг <br> предпринять дальше, смело заглядывайте в справочник
-		</div>
-	</div>
-	<div class="window">
-		<img src="./img/window.svg" alt="" class="window-img">
-		<div class="window-coll">
-			<span class="window-title">
-				Это таймер.
-			</span>
-			Когда время закончится,<br>
-			вы сможете завершить прохождение профпробы
 		</div>
 	</div>
 	
