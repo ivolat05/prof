@@ -9,13 +9,15 @@ $(function () {
     let listDialog = [{
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Здравствуйте, доктор. Кажется, я заболела`
+        "dialog": `Здравствуйте, доктор. Кажется, я заболела`,
+        "data": `complaints`
     }, {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
         "dialog": `Здравствуйте! Я врач-терапевт, добро пожаловать на онлайн-консультацию. Скажите,
-			пожалуйста, что вас беспокоит?`
+			пожалуйста, что вас беспокоит?`,
+        "data": `complaints`
     }
 
         , {
@@ -23,70 +25,80 @@ $(function () {
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
         "dialog": `Я нехорошо себя чувствую, похоже на простуду.<br>
-		Скажите, пожалуйста, что делать?`
+		Скажите, пожалуйста, что делать?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": ` Скажите, пожалуйста, поднималась ли у вас температура?`
+        "dialog": ` Скажите, пожалуйста, поднималась ли у вас температура?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Меня знобит, температура 37,5.`
+        "dialog": `Меня знобит, температура 37,5.`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `А горло у вас болит? Есть ли боли при глотании?`
+        "dialog": `А горло у вас болит? Есть ли боли при глотании?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Да, горло болит, глотать немного больно.`
+        "dialog": `Да, горло болит, глотать немного больно.`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `А есть ли у вас кашель, затруднения при дыхании, боли в груди?`
+        "dialog": `А есть ли у вас кашель, затруднения при дыхании, боли в груди?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Кашля нет, дышу хорошо.?`
+        "dialog": `Кашля нет, дышу хорошо.?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `У вас есть насморк, заложенность носа или подобные жалобы?`
+        "dialog": `У вас есть насморк, заложенность носа или подобные жалобы?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Да, из носа течёт ручьём, иногда он заложен.`
+        "dialog": `Да, из носа течёт ручьём, иногда он заложен.`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `Скажите, пожалуйста, у вас голова не болит? Уши не беспокоят?`
+        "dialog": `Скажите, пожалуйста, у вас голова не болит? Уши не беспокоят?`,
+        "data": `complaints`
     }
 
         , {
@@ -94,21 +106,24 @@ $(function () {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Голова не болит, с ушами тоже всё в порядке.`
+        "dialog": `Голова не болит, с ушами тоже всё в порядке.`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `Когда вы заболели? С чем-нибудь связываете появление ваших жалоб?`
+        "dialog": `Когда вы заболели? С чем-нибудь связываете появление ваших жалоб?`,
+        "data": `complaints`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Думаю, вчера. Я гуляла под дождём и промокла.`
+        "dialog": `Думаю, вчера. Я гуляла под дождём и промокла.`,
+        "data": `anamnesis`
     }
 
         , {
@@ -116,21 +131,24 @@ $(function () {
         "name": "Врач",
         "foto": "./img/main/doctor.png",
         "dialog": `Подскажите, а вы уже обращались к какому-нибудь врачу? Что-то делали для улучшения
-		самочувствия?`
+		самочувствия?`,
+        "data": `anamnesis`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Нет, никуда не ходила — только сидела дома и пила чай с лимоном.`
+        "dialog": `Нет, никуда не ходила — только сидела дома и пила чай с лимоном.`,
+        "data": `anamnesis`
     }
 
         , {
 
         "name": "Врач",
         "foto": "./img/main/doctor.png",
-        "dialog": `А кто-то ещё у вас дома болеет? Может, вы ходили куда-то, где вас могли заразить?`
+        "dialog": `А кто-то ещё у вас дома болеет? Может, вы ходили куда-то, где вас могли заразить?`,
+        "data": `anamnesis`
     }
 
         , {
@@ -138,7 +156,8 @@ $(function () {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Нет, я работаю из дома и никуда не ездила. Из близких тоже никто не болеет.`
+        "dialog": `Нет, я работаю из дома и никуда не ездила. Из близких тоже никто не болеет.`,
+        "data": `anamnesis`
     }
 
         , {
@@ -146,43 +165,46 @@ $(function () {
         "name": "Врач",
         "foto": "./img/main/doctor.png",
         "dialog": `Скажите, пожалуйста, есть ли у вас хронические заболевания, аллергии, принимаете ли вы
-		какие-то лекарства?`
+		какие-то лекарства?`,
+        "data": `anamnesis`
     }
 
         , {
 
         "name": "Пациент Штро Анна",
         "foto": "./img/main/patient.png",
-        "dialog": `Нет, хронических заболеваний нет, аллергии нет.`
+        "dialog": `Нет, хронических заболеваний нет, аллергии нет.`,
+        "data": `anamnesis`
     }
-
-        , {
-
-        "name": "Врач",
-        "foto": "./img/main/doctor.png",
-        "dialog": `Анна, так как у нас удалённый приём, мне нужна будет ваша помощь в осмотре. Могу ли я
-		вас попросить сфотографировать горло? Для этого широко откройте рот, расслабьте язык,
-		поднести камеру к нёбу и сделайте фото со вспышкой.`
-    }
-
-        , {
-
-        "name": "Пациент Штро Анна",
-        "foto": "./img/main/patient.png",
-        "dialog": `<img class="main-chat-img" src="./img/main/foto.jpg" alt="">`
-    }
-
     ]
 
-    function dialog(img, name, text, time) {
+    let listFoto = [
+        {
+
+            "name": "Врач",
+            "foto": "./img/main/doctor.png",
+            "dialog": `Анна, так как у нас удалённый приём, мне нужна будет ваша помощь в осмотре. Могу ли я
+			вас попросить сфотографировать горло? Для этого широко откройте рот, расслабьте язык,
+			поднести камеру к нёбу и сделайте фото со вспышкой.`
+        }
+
+        , {
+
+            "name": "Пациент Штро Анна",
+            "foto": "./img/main/patient.png",
+            "dialog": `<img class="main-chat-img" src="./img/main/foto.jpg" alt="">`
+        }
+    ]
+
+    function dialog(img, name, text, data, time) {
         const chatBox = document.querySelector('.main-chat');
         let elem = document.createElement("div");
-        elem.classList.add('main-chat-row-2');
+        elem.classList.add('main-chat-row');
         elem.innerHTML = `
 		<div class="avatar-box">
 			<img src="${img}" alt="" class="avatar">
 		</div>
-		<div class="main-chat-coll">
+		<div class="main-chat-coll" data-status="${data}">
 			<div class="main-chat-head">
 				<div class="main-chat-name">
 					${name}
@@ -275,15 +297,16 @@ $(function () {
     openPanel()
     // скролл вниз чата
     function scrollBottom() {
-        let timer;
-        let isPaused = false;
+
+        var timer;
+        var isPaused = false;
 
         $(window).on('wheel', function () {
             isPaused = true;
             clearTimeout(timer);
             timer = window.setTimeout(function () {
                 isPaused = false;
-            }, 1000);
+            }, 10000);
         });
 
         window.setInterval(function () {
@@ -297,54 +320,84 @@ $(function () {
         const back = document.querySelector('.fon');
         let count = 1;
         let indicator = false;
+        let complaints = document.querySelector('.complaints');
+        let anamnesis = document.querySelector('.anamnesis');
+        let medicalCart = document.querySelector('.medical-cart');
+        let fotoInput = document.querySelector('.foto-input');
+        let minut = 2;
         back.addEventListener('click', () => {
             if (back.classList.contains('--active')) {
                 back.classList.remove('--active');
                 back.firstElementChild.classList.remove('--active');
                 timer();
-                setTimeout(dialog(listDialog[0].foto, listDialog[0].name, listDialog[0].dialog, '10:00'), 1000)
+                setTimeout(dialog(listDialog[0].foto, listDialog[0].name, listDialog[0].dialog, listDialog[0].data, '10:00'), 1000)
                 setTimeout(() => {
-                    printsDoctar();
+                    printsDoctar('10:00');
                 }, 2000)
                 setTimeout(() => {
-                    setTimeout(dialog(listDialog[1].foto, listDialog[1].name, listDialog[1].dialog, '10:00'), 2000)
+                    setTimeout(dialog(listDialog[1].foto, listDialog[1].name, listDialog[1].dialog, listDialog[1].data, '10:02'), 2000)
+                    indicator = true;
                 }, 4000)
 
             }
 
         })
-        console.log(listDialog.length)
+
         window.addEventListener('keydown', () => {
             if (back.classList.contains('--active')) {
                 back.classList.remove('--active');
                 back.firstElementChild.classList.remove('--active');
                 timer();
-                setTimeout(dialog(listDialog[0].foto, listDialog[0].name, listDialog[0].dialog, '10:00'), 1000)
+                setTimeout(dialog(listDialog[0].foto, listDialog[0].name, listDialog[0].dialog, listDialog[0].data, '10:00'), 1000)
                 setTimeout(() => {
-                    printsDoctar();
+                    printsDoctar('10:00');
                 }, 2000)
                 setTimeout(() => {
-                    setTimeout(dialog(listDialog[1].foto, listDialog[1].name, listDialog[1].dialog, '10:00'), 2000)
+                    setTimeout(dialog(listDialog[1].foto, listDialog[1].name, listDialog[1].dialog, listDialog[1].data, '10:02'), 2000)
                     indicator = true;
                 }, 4000)
             } else {
                 if (indicator && count < listDialog.length) {
+                    complaints.classList.remove('--back-color');
+                    complaints.classList.remove('no-active');
+
+                    if (listDialog[count].data == "anamnesis" && !medicalCart.classList.contains('no-active')) {
+                        anamnesis.classList.remove('--back-color');
+                        anamnesis.classList.remove('no-active');
+                    }
                     indicator = false;
+                    minut += 2;
+
+                    if (minut < 10) {
+                        timeBlock = `10:0${minut}`;
+                    } else {
+                        timeBlock = `10:${minut}`;
+                    }
+                    minut += 2;
+
+                    if (minut < 10) {
+                        timeBlockTwo = `10:0${minut}`;
+                    } else {
+                        timeBlockTwo = `10:${minut}`;
+                    }
                     count += 1;
-                    setTimeout(dialog(listDialog[count].foto, listDialog[count].name, listDialog[count].dialog, '10:00'), 1000)
+                    setTimeout(dialog(listDialog[count].foto, listDialog[count].name, listDialog[count].dialog, listDialog[count].data, timeBlock), 1000)
                     setTimeout(() => {
-                        printsDoctar();
+                        printsDoctar(timeBlock);
                     }, 2000)
                     count += 1;
                     setTimeout(() => {
                         if (count != listDialog.length) {
-                            setTimeout(dialog(listDialog[count].foto, listDialog[count].name, listDialog[count].dialog, '10:00'), 1000)
+                            setTimeout(dialog(listDialog[count].foto, listDialog[count].name, listDialog[count].dialog, listDialog[count].data, timeBlockTwo), 1000)
                             indicator = true;
                         } else if (count === listDialog.length) {
                             indicator = true;
+                            fotoInput.classList.remove('--back-color');
+                            fotoInput.classList.remove('no-active');
                         }
                     }, 4000)
                     scrollBottom()
+
                 }
 
             }
@@ -355,8 +408,462 @@ $(function () {
 
     start()
 
+    // отсылаем фото
+    function fotoInput() {
+        let fotoInput = document.querySelector('.foto-input');
+        fotoInput.addEventListener('click', () => {
+            let diagnoz = document.querySelector('.diagnoz');
+            diagnoz.classList.remove('--back-color');
+            diagnoz.classList.remove('no-active');
+            fotoInput.classList.add('--good');
+            fotoInput.innerHTML = 'Установить вероятный диагноз 1/1';
+            fotoInput.disabled = true;
+            printsDoctar('10:42');
+            setTimeout(() => {
+                setTimeout(dialog(listFoto[0].foto, listFoto[0].name, listFoto[0].dialog, listFoto[0].data, '10:44'), 1000)
+                scrollBottom()
+            }, 2000)
+            setTimeout(() => {
+                setTimeout(dialog(listFoto[1].foto, listFoto[1].name, listFoto[1].dialog, listFoto[1].data, '10:46'), 2000)
+                scrollBottom()
+            }, 4000)
+        })
+    }
+    fotoInput();
+
+    // diagnoz
+    function diagnoz() {
+        let diagnozBtn = document.querySelectorAll('.diagnoz-btn');
+        let recommendations = document.querySelector('.recommendations');
+        const chatBox = document.querySelector('.main-chat');
+        let diagnozFormBtn = document.querySelector('.diagnoz-form-btn');
+        let diagnozFormInput = document.querySelector('.diagnoz-form-input');
+        diagnozBtn.forEach(item => {
+            item.addEventListener('click', () => {
+                if (item.value == 'ангина') {
+
+                    let elem = document.createElement("div");
+                    elem.classList.add('main-chat-error');
+                    elem.innerHTML = `
+
+						<div class="main-error-row">
+							<div class="main-error-coll">
+								<h3 class="main-error-title">
+									Судя по симптомам, это не ангина
+								</h3>
+								<p class="main-error-text">
+									Симптоматику заболевания можно найти в справочнике.
+								</p>
+								<p class="main-error-text">
+									Выберите другое действие
+								</p>
+							</div>
+							<div class="avatar-box">
+								<img src="./img/main/error.png" alt="" class="avatar">
+							</div>
+						</div>
+ 				`
+                    chatBox.appendChild(elem);
+                    item.parentElement.classList.add('--eror');
+                    scrollBottom()
+                } else {
+                    recommendations.classList.remove('--back-color');
+                    recommendations.classList.remove('no-active');
+                    diagnozFormBtn.classList.remove('deactivate');
+                    diagnozFormBtn.classList.remove('no-active');
+                    item.parentElement.classList.add('--good');
+                    diagnozFormInput.innerHTML = 'острый	назофарингит.';
+                    diagnozBtn.forEach(e => {
+                        e.parentElement.style.pointerEvents = 'none';
+                    })
+                    let diagonzHeadInfo = document.querySelector('.diagonz-head-info');
+                    diagonzHeadInfo.innerHTML = 'Установить вероятный диагноз 1/1';
+                    diagonzHeadInfo.parentElement.classList.add('--good');
+                    printsDoctar('10:50');
+                    scrollBottom()
+                    setTimeout(() => {
+                        let elem = document.createElement("div");
+                        elem.classList.add('main-chat-row');
+                        elem.innerHTML = `
+						<div class="avatar-box">
+						<img src="./img/main/doctor.png" alt="" class="avatar">
+					</div>
+					<div class="main-chat-coll">
+						<div class="main-chat-head">
+							<div class="main-chat-name">
+								Врач
+							</div>
+							<div class="main-chat-time">
+								10:52
+							</div>
+						</div>
+						<div class="main-chat-text">
+							Ваши симптомы скорее всего связаны с острой респираторной вирусной инфекцией: острый
+							назофарингит.
+						</div>
+					</div>
+					 `
+                        chatBox.appendChild(elem);
+                        scrollBottom()
+                    }, 2000)
 
 
+
+                }
+
+            })
+        })
+    }
+    diagnoz();
+
+    // recommendations
+
+    function recommendations() {
+        let recomBtn = document.querySelectorAll('.recom-btn');
+        const chatBox = document.querySelector('.main-chat');
+        let recomInfo = document.querySelector('.recom-info');
+        let tims;
+        let sum = 0;;
+        recomBtn.forEach(item => {
+            item.addEventListener("click", () => {
+                sum += 1;
+                recomInfo.innerHTML = `Дать рекомендацию ${sum}/2`;
+
+                if (item.value == 'Общие рекомендации') {
+                    item.parentElement.classList.add('--good');
+                    if (item.checked) {
+                        printsDoctar('10:54');
+                        tims = '10:56';
+
+                    } else {
+                        printsDoctar('10:58');
+                        tims = '11:00';
+                    }
+                    scrollBottom()
+                    setTimeout(() => {
+                        let elem = document.createElement("div");
+                        elem.classList.add('main-chat-row');
+                        elem.innerHTML = `
+					<div class="avatar-box">
+					<img src="./img/main/doctor.png" alt="" class="avatar">
+				</div>
+				<div class="main-chat-coll">
+					<div class="main-chat-head">
+						<div class="main-chat-name">
+							Врач
+						</div>
+						<div class="main-chat-time">
+							${tims}
+						</div>
+					</div>
+					<div class="main-chat-text">
+						В таких случаях обычно используют:
+						<ul class="main-cht-list">
+							<li class="main-cht-inner">
+								- полупостельный режим;
+							</li>
+							<li class="main-cht-inner">
+								- контроль температуры 2 раз в день;
+							</li>
+							<li class="main-cht-inner">
+								- обильное теплое питье 2-3 литра в сутки;
+							</li>
+							<li class="main-cht-inner">
+								- при температуре выше 38,5 °С или выраженной головной боли, боли в мышцах:
+								парацетамол
+								или ибупрофен;
+							</li>
+							<li class="main-cht-inner">
+								- при насморке: сосудосуживающие препараты, но не более 5-7 дней;
+							</li>
+							<li class="main-cht-inner">
+								- от боли в горле: антисептические спреи и пастилки.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				 `
+                        chatBox.appendChild(elem);
+                        scrollBottom()
+                    }, 2000)
+                    item.parentElement.style.pointerEvents = 'none';
+                } else {
+                    item.parentElement.classList.add('--good');
+                    item.parentElement.style.pointerEvents = 'none';
+                    if (item.checked) {
+                        printsDoctar('10:54');
+                        tims = '10:56';
+                    } else {
+                        printsDoctar('10:58');
+                        tims = '11:00';
+                    }
+                    scrollBottom()
+                    setTimeout(() => {
+                        let elem = document.createElement("div");
+                        elem.classList.add('main-chat-row');
+                        elem.innerHTML = `
+					<div class="avatar-box">
+					<img src="./img/main/doctor.png" alt="" class="avatar">
+				</div>
+				<div class="main-chat-coll">
+					<div class="main-chat-head">
+						<div class="main-chat-name">
+							Врач
+						</div>
+						<div class="main-chat-time">
+							${tims}
+						</div>
+					</div>
+					<div class="main-chat-text">
+					При ухудшении общего самочувствия вы можете обратиться к доктору очно или вызвать
+					врача на дом.
+					</div>
+				</div>
+
+				 `
+                        chatBox.appendChild(elem);
+                        scrollBottom()
+                    }, 2000)
+
+                }
+                if (sum == 2) {
+                    recomInfo.parentElement.classList.add('--good');
+                    finish();
+                }
+            })
+        })
+    }
+    recommendations()
+    // complaint
+    function complaint() {
+        let complaintBtn = document.querySelectorAll('.complaint-btn');
+        let complaintInfo = document.querySelector('.complaint-info');
+        let medicalCart = document.querySelector('.medical-cart');
+        let num = 0;
+        complaintBtn.forEach(item => {
+            item.addEventListener('click', () => {
+                if (item.value == 'Головная боль') {
+                    item.parentElement.classList.add('--eror')
+                    item.parentElement.classList.add('--gray')
+                    item.style.pointerEvents = 'none';
+                } else {
+                    item.parentElement.classList.add('--good')
+                    item.parentElement.style.pointerEvents = 'none';
+                    item.parentElement.classList.add('--gray')
+                    num += 1;
+                    if (num <= 4) {
+                        complaintInfo.innerHTML = `Собрать жалобы ${num}/4`
+                    } else {
+                        complaintInfo.innerHTML = `Собрать жалобы 4/4`
+                    }
+
+                    if (num == 4) {
+
+                        complaintInfo.parentElement.classList.add('--good');
+                        medicalCart.classList.remove('--back-color');
+                        medicalCart.classList.remove('no-active');
+                    }
+                }
+            })
+        })
+    }
+    complaint()
+
+    // complaint
+    function anamnesis() {
+        let anamnesisBtn = document.querySelectorAll('.anamnesis-btn');
+        let anamnesisInfo = document.querySelector('.anamnesis-info');
+        let num = 0;
+        anamnesisBtn.forEach(item => {
+            item.addEventListener('click', () => {
+
+                item.parentElement.classList.add('--good')
+                item.parentElement.style.pointerEvents = 'none';
+                item.parentElement.classList.add('--gray')
+                num += 1;
+                anamnesisInfo.innerHTML = `Собрать анамнез ${num}/4`
+                if (num == 4) {
+                    anamnesisInfo.parentElement.classList.add('--good');
+
+                }
+            })
+        })
+    }
+    anamnesis()
+
+    //medical-cart
+    function medicalCart() {
+        let medicalbtn = document.querySelector('.medical-cart');
+        let complaints = document.querySelector('.complaints');
+        let complaintsFormBtn = document.querySelector('.complaints-form-btn');
+        let complaintsFormInfo = document.querySelector('.complaints-form-info');
+        let anamnesis = document.querySelector('.anamnesis');
+        let anamnesisFormBtn = document.querySelector('.anamnesis-form-btn');
+        let anamnesisFormInfo = document.querySelector('.anamnesis-form-info');
+        let sum = 0;
+        medicalbtn.addEventListener('click', () => {
+            if (!complaints.classList.contains("no-active")) {
+                sum = 1;
+                complaintsFormBtn.classList.remove('no-active');
+                complaintsFormBtn.classList.remove('deactivate');
+                medicalbtn.innerHTML = `Заполнить медкарту ${sum}/2`
+                complaintsFormInfo.innerHTML = `Боли в горле, заложенность носа, насморк, общая слабость, озноб, повышеннная температура`
+            }
+            if (!anamnesis.classList.contains("no-active")) {
+                sum = 2;
+                anamnesisFormBtn.classList.remove('no-active');
+                anamnesisFormBtn.classList.remove('deactivate');
+                medicalbtn.innerHTML = `Заполнить медкарту ${sum}/2`
+                anamnesisFormInfo.innerHTML = `Температура 37,5°С, кашля и одышки нет. Cчитает себя больной со вчерашнего дня, причина: переохлаждение под дождём. За медицинской помощью не обращалась. Эпидемиологический анамнез: не отягощён.`
+            }
+            if (sum == 2) {
+                medicalbtn.classList.add('--good');
+                medicalbtn.disabled = true;
+            }
+        })
+    }
+    medicalCart()
+    // finish
+    function finish() {
+        const chatBox = document.querySelector('.main-chat');
+        setTimeout(() => {
+            let elem = document.createElement("div");
+            elem.classList.add('main-chat-row');
+            elem.innerHTML = `
+        <div class="avatar-box">
+        <img src="./img/main/doctor.png" alt="" class="avatar">
+    </div>
+    <div class="main-chat-coll">
+        <div class="main-chat-head">
+            <div class="main-chat-name">
+                Врач
+            </div>
+            <div class="main-chat-time">
+              11:02
+            </div>
+        </div>
+        <div class="main-chat-text">
+        Анна, я могу вам предложить повторную консультацию через 3 дня, чтобы мы проконтролировали ваше самочувствие.
+        </div>
+    </div>
+
+     `
+            chatBox.appendChild(elem);
+            scrollBottom()
+        }, 2000)
+        setTimeout(() => {
+            let elem = document.createElement("div");
+            elem.classList.add('main-chat-row');
+            elem.innerHTML = `
+            <div class="avatar-box">
+            <img src="./img/main/patient.png" alt="" class="avatar">
+        </div>
+    <div class="main-chat-coll">
+        <div class="main-chat-head">
+        <div class="main-chat-name">
+        Пациент Штро Анна
+    </div>
+            <div class="main-chat-time">
+              11:04
+            </div>
+        </div>
+        <div class="main-chat-text">
+        Да, давайте!
+        </div>
+    </div>
+
+     `
+            chatBox.appendChild(elem);
+            scrollBottom()
+            printsDoctar('11:04');
+        }, 4000)
+
+        setTimeout(() => {
+            let elem = document.createElement("div");
+            elem.classList.add('main-chat-row');
+            elem.innerHTML = `
+        <div class="avatar-box">
+        <img src="./img/main/doctor.png" alt="" class="avatar">
+    </div>
+    <div class="main-chat-coll">
+        <div class="main-chat-head">
+            <div class="main-chat-name">
+                Врач
+            </div>
+            <div class="main-chat-time">
+              11:06
+            </div>
+        </div>
+        <div class="main-chat-text">
+        Хорошо, буду ждать вас. Выздоравливайте!
+        </div>
+    </div>
+
+     `
+            chatBox.appendChild(elem);
+            scrollBottom()
+        }, 6000)
+
+        setTimeout(() => {
+            let elem = document.createElement("div");
+            elem.classList.add('main-chat-row');
+            elem.innerHTML = `
+            <div class="avatar-box">
+            <img src="./img/main/patient.png" alt="" class="avatar">
+        </div>
+    <div class="main-chat-coll">
+        <div class="main-chat-head">
+        <div class="main-chat-name">
+        Пациент Штро Анна
+    </div>
+            <div class="main-chat-time">
+              11:08
+            </div>
+        </div>
+        <div class="main-chat-text">
+        Спасибо, до свидания!
+        </div>
+    </div>
+
+     `
+            chatBox.appendChild(elem);
+            scrollBottom()
+
+        }, 8000)
+
+        setTimeout(() => {
+            let elem = document.createElement("div");
+            elem.classList.add('main-chat-footer');
+            elem.innerHTML = `
+            <div class="main-footer-coll">
+            <h3 class="main-footer-title">
+                Вы молодец!
+            </h3>
+            <p class="man-footer-text">
+                Пациент получил правильные рекомендации
+                и скоро пойдёт на поправку
+            </p>
+        </div>
+        <div class="main-footer-coll-2">
+            <img src="./img/main/main-1.png" alt="" class="main-footer-img">
+            <a href="#etap" class="main-chat-end open-modal">
+                К следующему пациенту
+            </a>
+        </div>
+
+     `
+            chatBox.appendChild(elem);
+            //open popup
+            $('.open-modal').magnificPopup({
+                type: 'inline',
+                mainClass: 'mfp-fade'
+            });
+            scrollBottom()
+        }, 10000)
+
+
+    }
     // секундомер
     function timer() {
         let minut = 20;
@@ -392,7 +899,7 @@ $(function () {
     }
 
     // доктор набирает текст
-    function printsDoctar() {
+    function printsDoctar(time) {
         const chatBox = document.querySelector('.main-chat');
         let elem = document.createElement("div");
         elem.classList.add('main-print');
@@ -405,7 +912,7 @@ $(function () {
 							Врач
 						</div>
 						<div class="main-chat-time">
-							10:14
+							${time}
 						</div>
 					</div>
 					<div class="main-chat-text main-dots-box">
