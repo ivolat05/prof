@@ -418,7 +418,7 @@
 		
 		
 							<div class="accardion">
-								<button class="accardion-head btn-error --blue">
+								<button class="accardion-head  --back-color no-active btn-error  ">
 									<span class="accardion-head-span">
 										Собрать жалобы 2/4
 									</span>
@@ -456,11 +456,17 @@
 												Насморк
 											</span>
 										</label>
+										<label class="accordion-label --eror  --gray">
+											<input type="checkbox" class="accordion-label-input">
+											<span class="accordion-label-span">
+												Головная боль
+											</span>
+										</label>
 									</div>
 								</div>
 							</div>
 							<div class="accardion">
-								<button class="accardion-head btn-error  --eror">
+								<button class="accardion-head btn-error  --back-color no-active  --eror">
 									<span class="accardion-head-span">
 										Установить вероятный диагноз 1/1
 									</span>
@@ -476,13 +482,13 @@
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												ангина
+												Вероятно, это ангина
 											</span>
 										</label>
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												фарингит
+												Вероятно, это фарингит
 											</span>
 										</label>
 		
@@ -490,11 +496,11 @@
 								</div>
 							</div>
 		
-							<button class="main-panel-btn --blue btn-error">
+							<button class="main-panel-btn no-active  --back-color  btn-error">
 								Заполнить медкарту 0/2
 							</button>
 							<div class="accardion">
-								<button class="accardion-head btn-error  --blue">
+								<button class="accardion-head btn-error  --back-color no-active  ">
 									<span class="accardion-head-span">
 										Дать рекомендацию 0/2
 									</span>
@@ -525,7 +531,7 @@
 								</div>
 							</div>
 							<div class="accardion">
-								<button class="accardion-head no-active btn-error --back-color">
+								<button class="accardion-head no-active  btn-error --back-color">
 									<span class="accardion-head-span">
 										Собрать анамнез 0/4
 									</span>
@@ -542,25 +548,25 @@
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												Температура
+												гуляла под дождём
 											</span>
 										</label>
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												Боль в горле
+												сидела дома и пила чай с лимоном.
 											</span>
 										</label>
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												Кашель
+												работаю из дома и никуда не ездила. Из близких тоже никто не болеет.
 											</span>
 										</label>
 										<label class="accordion-label">
 											<input type="checkbox" class="accordion-label-input">
 											<span class="accordion-label-span">
-												Насморк
+												Нет, хронических заболеваний нет, аллергии нет.
 											</span>
 										</label>
 									</div>
@@ -664,10 +670,10 @@
 		</div>
 		<div class="medical-form">
 			<div class="medical-box-btn">
-				<button class="medical-form-btn active btn-error" data-tab="tab-1">
+				<button class="medical-form-btn active btn-error no-active  deactivate" data-tab="tab-1">
 					Жалобы
 				</button>
-				<button class="medical-form-btn btn-error" data-tab="tab-2">
+				<button class="medical-form-btn btn-error no-active  deactivate" data-tab="tab-2">
 					Анамнез
 				</button>
 				<button class="medical-form-btn no-active  deactivate  btn-error" data-tab="tab-3">
@@ -681,15 +687,16 @@
 				<div class="medical-tab-title">
 					Проверьте данные в медкарте и нажмите кнопку «Сохранить»
 				</div>
-				<div class="medical-textara">Боли в горле, заложенность носа, насморк, слабость, озноб, повышеннная
-					температура
+				<div class="medical-textara">
 				</div>
 			</div>
 			<div id="tab-2" class="medical-tab ">
 				<div class="medical-tab-title">
 					Проверьте данные в медкарте и нажмите кнопку «Сохранить»
 				</div>
-				<div class="medical-textara"> </div>
+				<div class="medical-textara">
+	
+				</div>
 			</div>
 			<div id="tab-3" class="medical-tab ">
 				<div class="medical-tab-title">
