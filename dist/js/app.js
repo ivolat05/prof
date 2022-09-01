@@ -356,12 +356,12 @@ $(function () {
 		return tt
 	}
 	function start() {
-		let numClock = 0;
+
 		let timeStart = 1000;
 		for (let i = 0; i < startList.length; i++) {
 			setTimeout(() => {
-				numClock += 2;
-				setTimeout(dialog(startList[`${i}`].foto, startList[`${i}`].name, startList[`${i}`].dialog, startList[`${i}`].data, `10:0${numClock}`), `${timeStart}`)
+
+				setTimeout(dialog(startList[`${i}`].foto, startList[`${i}`].name, startList[`${i}`].dialog, startList[`${i}`].data, getCurrentTimeString2(Math.round(Date.now() / 1000))), `${timeStart}`)
 				scrollBottom()
 			}, `${timeStart}`)
 			timeStart += 2000;
@@ -590,7 +590,7 @@ $(function () {
 		let status = true;
 		const cart = document.querySelector('.cart');
 		let indicatorComplaints = 0;
-		let numClock = 0;
+
 		btn.forEach(item => {
 			item.addEventListener('click', () => {
 
@@ -645,16 +645,16 @@ $(function () {
 
 					}
 					item.style.pointerEvents = 'none'
-					printsDoctar('10:00');
+					printsDoctar(getCurrentTimeString2(Math.round(Date.now() / 1000)));
 					scrollBottom()
 					setTimeout(() => {
 
-						setTimeout(dialog(test[dataArr].foto, test[dataArr].name, test[dataArr].dialog, test[dataArr].data, '10:00'), 1000)
+						setTimeout(dialog(test[dataArr].foto, test[dataArr].name, test[dataArr].dialog, test[dataArr].data, getCurrentTimeString2(Math.round(Date.now() / 1000))), 1000)
 						scrollBottom()
 					}, 2000)
 					setTimeout(() => {
 
-						setTimeout(dialog(test[`${dataArr}-answer`].foto, test[`${dataArr}-answer`].name, test[`${dataArr}-answer`].dialog, test[`${dataArr}-answer`].data, '10:00'), 1000)
+						setTimeout(dialog(test[`${dataArr}-answer`].foto, test[`${dataArr}-answer`].name, test[`${dataArr}-answer`].dialog, test[`${dataArr}-answer`].data, getCurrentTimeString2(Math.round(Date.now() / 1000))), 1000)
 						scrollBottom()
 						status = true
 					}, 4000)
@@ -716,10 +716,10 @@ $(function () {
 				let dataArr = item.getAttribute('data-task');
 				let correct = item.getAttribute('data-indicator');
 				item.style.pointerEvents = 'none'
-				printsDoctar('10:00');
+				printsDoctar(getCurrentTimeString2(Math.round(Date.now() / 1000)));
 				scrollBottom()
 				setTimeout(() => {
-					dialog(dataTask[dataArr].foto, dataTask[dataArr].name, dataTask[dataArr].dialog, dataTask[dataArr].data, '10:00')
+					dialog(dataTask[dataArr].foto, dataTask[dataArr].name, dataTask[dataArr].dialog, dataTask[dataArr].data, getCurrentTimeString2(Math.round(Date.now() / 1000)))
 					scrollBottom()
 				}, 2000)
 				if (correct == 'diagnoz') {
@@ -754,7 +754,7 @@ $(function () {
 	// завершение
 	function theEnd() {
 		let btn = document.querySelector('.repeat');
-		let numClock = 0;
+
 		let timeStart = 1000;
 		btn.addEventListener('click', () => {
 			if (!btn.classList.contains('no-active')) {
@@ -762,8 +762,8 @@ $(function () {
 				for (let i = 0; i < endList.length; i++) {
 					if (endList[`${i}`].name == "Врач") {
 						setTimeout(() => {
-							numClock += 2;
-							printsDoctar('10:00');
+
+							printsDoctar(getCurrentTimeString2(Math.round(Date.now() / 1000)));
 							scrollBottom()
 						}, `${timeStart}`)
 						timeStart += 2000;
@@ -771,8 +771,8 @@ $(function () {
 
 					setTimeout(() => {
 
-						numClock += 2;
-						setTimeout(dialog(endList[`${i}`].foto, endList[`${i}`].name, endList[`${i}`].dialog, endList[`${i}`].data, `10:0${numClock}`), `${timeStart}`)
+
+						setTimeout(dialog(endList[`${i}`].foto, endList[`${i}`].name, endList[`${i}`].dialog, endList[`${i}`].data, getCurrentTimeString2(Math.round(Date.now() / 1000))), `${timeStart}`)
 
 						scrollBottom()
 					}, `${timeStart}`)
@@ -810,4 +810,12 @@ $(function () {
 		})
 	}
 	theEnd();
+
+	function getCurrentTimeString2(dots) {
+		timeString = new Date().toTimeString().replace(/:[0-9]{2,2} .*/, '');
+		return dots ? timeString : timeString.replace(/:/, ' ');
+	}
+
+
+
 })
