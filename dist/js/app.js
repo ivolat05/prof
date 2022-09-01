@@ -56,7 +56,7 @@ $(function () {
 		},
 	}
 
-	let listDialog = [{
+	let startList = [{
 		"name": "Пациент Штро Анна",
 		"foto": "./img/main/patient.png",
 		"dialog": `Здравствуйте, доктор. Кажется, я заболела`,
@@ -68,19 +68,36 @@ $(function () {
 		"dialog": `Здравствуйте! Я врач-терапевт, добро пожаловать на онлайн-консультацию. Скажите,
 			пожалуйста, что вас беспокоит?`,
 		"data": `complaints`
-	}
-
-		, {
+	}, {
 
 		"name": "Пациент Штро Анна",
-		"foto": "./img/main/patient.png",
+		"foto": "./img/window.svg",
 		"dialog": `Я нехорошо себя чувствую, похоже на простуду.<br>
 		Скажите, пожалуйста, что делать?`,
 		"data": `complaints`
 	}
-
-
 	]
+
+	let startError = {
+		"standart-error": {
+			"title": "Это действие сейчас недоступно",
+			"text": " Если не знаете, какой шаг предпринять дальше, смело заглядывайте в справочник",
+
+		},
+		"recom-error": {
+			"title": "Давать рекомендации ещё рано",
+			"text": "Загляните в справочник, если не знаете, как действовать дальше",
+		},
+		"cart-error": {
+			"title": "Заполнять медкарту ещё рано — вы не расспросили пациента",
+			"text": "Загляните в справочник, если не знаете, как действовать дальше",
+		},
+		"diagnoz-error": {
+			"title": "Устанавливать вероятный диагноз ещё рано",
+			"text": "Загляните в справочник, если не знаете, как действовать дальше",
+		},
+	}
+
 
 
 	function dialog(img, name, text, data, time) {
@@ -204,22 +221,17 @@ $(function () {
 	}
 
 	function start() {
-		setTimeout(() => {
-			setTimeout(dialog(listDialog[0].foto, listDialog[0].name, listDialog[0].dialog, listDialog[0].data, '10:00'), 1000)
-			scrollBottom()
-		}, 1000)
-		setTimeout(() => {
-			printsDoctar('10:00');
-			scrollBottom()
-		}, 2000)
-		setTimeout(() => {
-			setTimeout(dialog(listDialog[1].foto, listDialog[1].name, listDialog[1].dialog, listDialog[1].data, '10:02'), 2000)
-			scrollBottom()
-		}, 4000)
-		setTimeout(() => {
-			setTimeout(dialog(listDialog[2].foto, listDialog[2].name, listDialog[2].dialog, listDialog[2].data, '10:04'), 4000)
-			scrollBottom()
-		}, 6000)
+		let numClock = 0;
+		let timeStart = 1000;
+		for (let i = 0; i < startList.length; i++) {
+			setTimeout(() => {
+				numClock += 2;
+				setTimeout(dialog(startList[`${i}`].foto, startList[`${i}`].name, startList[`${i}`].dialog, startList[`${i}`].data, `10:0${numClock}`), `${timeStart}`)
+				scrollBottom()
+			}, `${timeStart}`)
+			timeStart += 2000;
+		}
+
 		setTimeout(() => {
 			const chatBox = document.querySelector('.main-chat');
 			let elem = document.createElement("div");
@@ -334,7 +346,10 @@ $(function () {
 		let btn = document.querySelectorAll('.btn-error');
 		btn.forEach(item => {
 			item.addEventListener('click', () => {
+
 				if (item.classList.contains('no-active')) {
+					let dataArr = item.getAttribute('data-error');
+					console.log(dataArr)
 					let element = document.createElement("div");
 					element.classList.add('click-error');
 					element.innerHTML = `
@@ -342,9 +357,9 @@ $(function () {
 				<img src="./img/window.svg" alt="" class="window-img">
 				<div class="window-coll">
 					<span class="window-title">
-						Это действие сейчас недоступно.
+					${startError[dataArr].title}
 					</span>
-					Если не знаете, какой шаг <br> предпринять дальше, смело заглядывайте в справочник
+					${startError[dataArr].text}
 				</div>
 			</div>
 			`
