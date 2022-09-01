@@ -124,11 +124,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-chat ">
-		
-		
+						<div class="main-chat">
 						</div>
-		
 					</div>
 					<div class="main-panel">
 						<div class="main-panel-head">
@@ -141,11 +138,10 @@
 						</div>
 						<div class="main-panel-body ">
 							<div class="accardion">
-								<button class="accardion-head complaints  --back-color no-active btn-error  ">
-									<span class="accardion-head-span complaint-info">
+								<button class="accardion-head complaints  --back-color btn-error no-active ">
+									<span class="accardion-head-span ">
 										Собрать жалобы 0/4
 									</span>
-		
 									<svg class="accardion-svg" width="14" height="8" viewBox="0 0 14 8" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -154,45 +150,24 @@
 									</svg>
 								</button>
 								<div class="accardion-body">
-									<div class="accardion-body-wrapp ">
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input  complaint-btn"
-												value="Температура">
-											<span class="accordion-label-span ">
-												Температура
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input  complaint-btn"
-												value="Боль в горле">
-											<span class="accordion-label-span">
-												Боль в горле
-											</span>
-										</label>
-										<label class="accordion-label    ">
-											<input type="checkbox" class="accordion-label-input  complaint-btn" value="Кашель">
-											<span class="accordion-label-span">
-												Кашель
-											</span>
-										</label>
-										<label class="accordion-label   ">
-											<input type="checkbox" class="accordion-label-input  complaint-btn" value="Насморк">
-											<span class="accordion-label-span">
-												Насморк
-											</span>
-										</label>
-										<label class="accordion-label  ">
-											<input type="checkbox" class="accordion-label-input complaint-btn"
-												value="Головная боль">
-											<span class="accordion-label-span ">
-												Головная боль
-											</span>
-										</label>
+									<div class="accardion-body-wrapp">
+										<button class="accordion-btn button-click" data-info="temperature">
+											Температура
+										</button>
+										<button class="accordion-btn  button-click" data-info="pain">
+											Боль в горле
+										</button>
+										<button class="accordion-btn   button-click" data-info="сough">
+											Кашель
+										</button>
+										<button class=" accordion-btn button-click" data-info="runny">
+											Насморк
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="accardion">
-								<button class="accardion-head   diagnoz  --back-color no-active   ">
+								<button class="accardion-head diagnoz --back-color btn-error no-active   ">
 									<span class="accardion-head-span diagonz-head-info">
 										Установить вероятный диагноз 0/1
 									</span>
@@ -205,32 +180,24 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input diagnoz-btn" value="ангина">
-											<span class="accordion-label-span">
-												Вероятно, это ангина
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input diagnoz-btn" value="фарингит">
-											<span class="accordion-label-span">
-												Вероятно, это фарингит
-											</span>
-										</label>
-		
+										<button class="accordion-btn">
+											Вероятно, это ангина
+										</button>
+										<button class="accordion-btn">
+											Вероятно, это фарингит
+										</button>
 									</div>
 								</div>
 							</div>
 		
-							<button class="main-panel-btn medical-cart no-active   --back-color  btn-error">
+							<a href="#medical-card" class="open-modal cart main-panel-btn btn-error --back-color no-active">
 								Заполнить медкарту 0/2
-							</button>
+							</a>
 							<div class="accardion">
-								<button class="accardion-head btn-error recommendations   --back-color no-active  ">
-									<span class="accardion-head-span recom-info">
+								<button class="accardion-head recom  --back-color btn-error no-active">
+									<span class="accardion-head-span">
 										Дать рекомендацию 0/2
 									</span>
-		
 									<svg class="accardion-svg" width="14" height="8" viewBox="0 0 14 8" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -240,30 +207,20 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<label class="accordion-label">
-											<input type="radio" name='recom-1' class="accordion-label-input recom-btn"
-												value="Общие рекомендации">
-											<span class="accordion-label-span">
-												Общие рекомендации
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="radio" name='recom-1' class="accordion-label-input recom-btn"
-												value="Сходить на очный приём">
-											<span class="accordion-label-span">
-												Сходить на очный приём
-											</span>
-										</label>
-		
+										<button class="accordion-btn button-click">
+											Общие рекомендации
+										</button>
+										<button class="accordion-btn  button-click">
+											Сходить на очный приём
+										</button>
 									</div>
 								</div>
 							</div>
-							<div class="accardion">
-								<button class="accardion-head  anamnesis no-active  btn-error --back-color">
+							<div class="accardion ">
+								<button class="accardion-head  --back-color no-active btn-error">
 									<span class="accardion-head-span anamnesis-info">
 										Собрать анамнез 0/4
 									</span>
-		
 									<svg class="accardion-svg" width="14" height="8" viewBox="0 0 14 8" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -273,35 +230,26 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input anamnesis-btn">
-											<span class="accordion-label-span">
-												гуляла под дождём
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input anamnesis-btn">
-											<span class="accordion-label-span">
-												сидела дома и пила чай с лимоном.
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input anamnesis-btn">
-											<span class="accordion-label-span">
-												работаю из дома и никуда не ездила. Из близких тоже никто не болеет.
-											</span>
-										</label>
-										<label class="accordion-label">
-											<input type="checkbox" class="accordion-label-input anamnesis-btn">
-											<span class="accordion-label-span">
-												Нет, хронических заболеваний нет, аллергии нет.
-											</span>
-										</label>
+										<button class="accordion-btn  button-click">
+											гуляла под дождём
+										</button>
+										<button class="accordion-btn  button-click">
+											сидела дома и пила чай с лимоном.
+										</button>
+										<button class="accordion-btn  button-click">
+											работаю из дома и никуда не ездила. Из близких тоже никто не болеет.
+										</button>
+										<button class="accordion-btn  button-click">
+											Нет, хронических заболеваний нет, аллергии нет.
+										</button>
 									</div>
 								</div>
 							</div>
-							<button class="main-panel-btn foto-input  --back-color no-active btn-error">
+							<button class="main-panel-btn --back-color no-active btn-error">
 								Запросить фотографию горла 0/1
+							</button>
+							<button class="main-panel-btn --back-color no-active btn-error">
+								Предложить повторную консультацию
 							</button>
 		
 						</div>
@@ -348,6 +296,7 @@
 			</button>
 		</div>
 	</div>
+	
 	<div id="medical-card" class="medical  mfp-hide">
 		<button class="popup-close etap-close-btn">
 			<svg class="popup-svg" width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -454,19 +403,6 @@
 				</button>
 			</div>
 	
-		</div>
-	</div>
-	<div class="fon --active" data-dialog="dialog-1">
-		<div class="window main-chat--start --active">
-			<img src="./img/window.svg" alt="" class="window-img">
-			<div class="window-coll">
-				<span class="window-title">
-					Добро пожаловать в профпробы проекта «Билет в будущее».
-				</span><br>
-				Сделано совместно с Министерством просвещения РФ<br> и командой «Проектория Медиа». И да
-				прибудет с вами<br>
-				профориентация!
-			</div>
 		</div>
 	</div>
 	
