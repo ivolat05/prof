@@ -54,6 +54,68 @@ $(function () {
 			"dialog": `Да, из носа течёт ручьём, иногда он заложен.`,
 			"data": `complaints`
 		},
+		// anamness
+		"startDisease": {
+			"name": "Врач",
+			"foto": "./img/main/doctor.png",
+			"dialog": `Когда вы заболели? С чем-нибудь связываете появление ваших жалоб?`,
+			"data": `complaints`
+		},
+		"startDisease-answer": {
+			"name": "Пациент Штро Анна",
+			"foto": "./img/main/patient.png",
+			"dialog": `Думаю, вчера. Я гуляла под дождём и промокла.`,
+			"data": `complaints`
+		},
+		"currentDisease": {
+			"name": "Врач",
+			"foto": "./img/main/doctor.png",
+			"dialog": `Подскажите, а вы уже обращались к какому-нибудь врачу? Что-то делали для улучшения самочувствия?`,
+			"data": `complaints`
+		},
+		"currentDisease-answer": {
+			"name": "Пациент Штро Анна",
+			"foto": "./img/main/patient.png",
+			"dialog": `Нет, никуда не ходила — только сидела дома и пила чай с лимоном.`,
+			"data": `complaints`
+		},
+		"epidemiologicalEnvironment": {
+			"name": "Врач",
+			"foto": "./img/main/doctor.png",
+			"dialog": `А кто-то ещё у вас дома болеет? Может, вы ходили куда-то, где вас могли заразить?`,
+			"data": `complaints`
+		},
+		"epidemiologicalEnvironment-answer": {
+			"name": "Пациент Штро Анна",
+			"foto": "./img/main/patient.png",
+			"dialog": `Нет, я работаю из дома и никуда не ездила. Из близких тоже никто не болеет.`,
+			"data": `complaints`
+		},
+		"otherDisease": {
+			"name": "Врач",
+			"foto": "./img/main/doctor.png",
+			"dialog": `Скажите, пожалуйста, есть ли у вас хронические заболевания, аллергии, принимаете ли вы какие-то лекарства?`,
+			"data": `complaints`
+		},
+		"otherDisease-answer": {
+			"name": "Пациент Штро Анна",
+			"foto": "./img/main/patient.png",
+			"dialog": `Нет, хронических заболеваний нет, аллергии нет.`,
+			"data": `complaints`
+		},
+		//foto Btn
+		"fotoBtn": {
+			"name": "Врач",
+			"foto": "./img/main/doctor.png",
+			"dialog": `Анна, так как у нас удалённый приём, мне нужна будет ваша помощь в осмотре. Могу ли я вас попросить сфотографировать горло? Для этого широко откройте рот, расслабьте язык, поднести камеру к нёбу и сделайте фото со вспышкой.`,
+			"data": `complaints`
+		},
+		"fotoBtn-answer": {
+			"name": "Пациент Штро Анна",
+			"foto": "./img/main/patient.png",
+			"dialog": `<img class="main-chat-img" src="./img/main/foto.jpg" alt="">`,
+			"data": `complaints`
+		},
 	}
 
 	let startList = [{
@@ -71,7 +133,7 @@ $(function () {
 	}, {
 
 		"name": "Пациент Штро Анна",
-		"foto": "./img/window.svg",
+		"foto": "./img/main/patient.png",
 		"dialog": `Я нехорошо себя чувствую, похоже на простуду.<br>
 		Скажите, пожалуйста, что делать?`,
 		"data": `complaints`
@@ -96,6 +158,11 @@ $(function () {
 			"title": "Устанавливать вероятный диагноз ещё рано",
 			"text": "Загляните в справочник, если не знаете, как действовать дальше",
 		},
+	}
+
+	let infoBox = {
+		"complaints-info": "Боли в горле, заложенность носа, насморк, общая слабость, озноб, повышеннная температура",
+		"anamnesis-info": "Температура 37,5 °С, кашля и одышки нет. Cчитает себя больной со вчерашнего дня, причина: переохлаждение под дождём. За медицинской помощью не обращалась. Эпидемиологический анамнез: не отягощён.",
 	}
 
 
@@ -369,6 +436,7 @@ $(function () {
 						blockError.remove();
 
 					}, 2000)
+					item.classList.add('--back-color')
 				}
 			})
 
@@ -377,18 +445,130 @@ $(function () {
 	}
 	errorClick()
 
+	// заполнение медецинской карты
+	function medCart(accordionBtn, medicalBtn, medicalInfo, text) {
+		const cart = document.querySelector('.cart');
+		let complaints = document.querySelector(`.${accordionBtn}`);
+		let medicalFormBtn = document.querySelectorAll('.medical-form-btn');
+		let medicalTab = document.querySelectorAll('.medical-tab');
+		let medicalInfoBox = document.querySelector(`.${medicalInfo}`);
+		cart.addEventListener('click', () => {
+			if (complaints.classList.contains('activ-btn')) {
+				let complaintsFormBtn = document.querySelector(`.${medicalBtn}`);
+				let dataArr = complaintsFormBtn.getAttribute('data-tab');
+				let id = document.getElementById(`${dataArr}`);
+				console.log(id)
+				complaintsFormBtn.classList.remove('deactivate');
+				complaintsFormBtn.classList.remove('no-active');
+				complaintsFormBtn.classList.remove('btn-error');
+				medicalFormBtn.forEach(item => {
+					if (item.classList.contains('active')) {
+						item.classList.remove('active')
+					}
+				})
+				medicalTab.forEach(item => {
+					if (item.classList.contains('active')) {
+						item.classList.remove('active')
+					}
+				})
+				complaintsFormBtn.classList.add('active');
+				id.classList.add('active');
+				medicalInfoBox.innerHTML = infoBox[text]
+
+			}
+		})
+	}
+
+
+	// coхранение медкарты
+	function medSave() {
+		const btn = document.querySelector('.medical-sabe');
+		const complaints = document.querySelector('.complaints');
+		const anamnesis = document.querySelector('.anamnesis');
+		let cart = document.querySelector('.cart');
+		btn.addEventListener('click', () => {
+			if (complaints.classList.contains('activ-btn') && !anamnesis.classList.contains('activ-btn')) {
+				cart.textContent = 'Заполнить медкарту 1/2';
+				cart.classList.add('btn-error');
+				cart.classList.add('no-active');
+				cart.href = "#";
+				unlockingColor('.anamnesis');
+				unlockingActive('.anamnesis');
+				unlockingError('.anamnesis');
+			}
+			if (anamnesis.classList.contains('activ-btn')) {
+				cart.textContent = 'Заполнить медкарту 2/2';
+				cart.classList.add('activ-btn');
+				unlockingColor('.foto-btn');
+				unlockingActive('.foto-btn');
+				unlockingError('.foto-btn');
+			}
+		})
+	}
+
+	medSave()
+
 	// старт действий
 	function clickBtn() {
 		let btn = document.querySelectorAll('.button-click');
+		const complaintsAccordionInfo = document.querySelector('.complaints-accordion-info');
+		const anamnesisAccordionInfo = document.querySelector('.anamnesis-info');
+		const fotoInfo = document.querySelector('.foto-btn');
 		let status = true;
+		const cart = document.querySelector('.cart');
+		let indicatorComplaints = 0;
+
 		btn.forEach(item => {
 			item.addEventListener('click', () => {
+
 				if (status) {
 					status = false;
 					item.classList.add('--active');
 
 					let dataArr = item.getAttribute('data-info');
+					let dataIndicator = item.getAttribute('data-indicator');
+					if (dataIndicator == 'complaints') {
+						indicatorComplaints += 1;
+						complaintsAccordionInfo.textContent = `Собрать жалобы ${indicatorComplaints}/4`
+						if (indicatorComplaints == 4) {
+							let good = document.querySelector(`.${dataIndicator}`);
 
+							good.classList.add('activ-btn');
+							cart.classList.add('open-modal');
+
+							unlockingColor('.cart')
+							unlockingActive('.cart')
+							unlockingError('.cart')
+							cart.href = "#medical-card";
+							medCart('complaints', 'complaints-form-btn', 'complaints-form-info', 'complaints-info');
+							indicatorComplaints = 0
+						}
+					}
+					if (dataIndicator == 'anamnesis') {
+						indicatorComplaints += 1;
+						anamnesisAccordionInfo.textContent = `Собрать анамнез ${indicatorComplaints}/4`
+						if (indicatorComplaints == 4) {
+							let good = document.querySelector(`.${dataIndicator}`);
+
+							good.classList.add('activ-btn');
+							cart.classList.add('open-modal');
+
+							unlockingColor('.cart')
+							unlockingActive('.cart')
+							unlockingError('.cart')
+							cart.href = "#medical-card";
+							medCart('anamnesis', 'anamnesis-form-btn', 'anamnesis-form-info', 'anamnesis-info');
+							indicatorComplaints = 0
+						}
+					}
+					if (dataIndicator == 'fotoBtn') {
+						fotoInfo.textContent = `Запросить фотографию горла 1/1`
+						fotoInfo.classList.add('activ-btn');
+						unlockingColor('.diagnoz')
+						unlockingActive('.diagnoz')
+						unlockingError('.diagnoz')
+
+					}
 					item.style.pointerEvents = 'none'
 					printsDoctar('10:00');
 					scrollBottom()
@@ -411,4 +591,7 @@ $(function () {
 		})
 	}
 	clickBtn()
+
+
+
 })

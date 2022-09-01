@@ -138,8 +138,9 @@
 						</div>
 						<div class="main-panel-body ">
 							<div class="accardion">
-								<button class="accardion-head complaints  --back-color btn-error no-active ">
-									<span class="accardion-head-span ">
+								<button class="accardion-head complaints  --back-color btn-error no-active "
+									data-error="standart-error">
+									<span class="accardion-head-span complaints-accordion-info ">
 										Собрать жалобы 0/4
 									</span>
 									<svg class="accardion-svg" width="14" height="8" viewBox="0 0 14 8" fill="none"
@@ -151,16 +152,20 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp">
-										<button class="accordion-btn button-click" data-info="temperature">
+										<button class="accordion-btn button-click" data-indicator="complaints"
+											data-info="temperature">
 											Температура
 										</button>
-										<button class="accordion-btn  button-click" data-info="pain">
+										<button class="accordion-btn  button-click" data-indicator="complaints"
+											data-info="pain">
 											Боль в горле
 										</button>
-										<button class="accordion-btn   button-click" data-info="сough">
+										<button class="accordion-btn   button-click" data-indicator="complaints"
+											data-info="сough">
 											Кашель
 										</button>
-										<button class=" accordion-btn button-click" data-info="runny">
+										<button class=" accordion-btn button-click" data-indicator="complaints"
+											data-info="runny">
 											Насморк
 										</button>
 									</div>
@@ -181,7 +186,7 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<button class="accordion-btn">
+										<button class="accordion-btn btn-error no-active" data-error="diagnoz-error">
 											Вероятно, это ангина
 										</button>
 										<button class="accordion-btn">
@@ -191,7 +196,7 @@
 								</div>
 							</div>
 		
-							<a href="#medical-card" class="cart main-panel-btn btn-error --back-color no-active"
+							<a href="#" class="cart open-modal main-panel-btn btn-error --back-color no-active"
 								data-error="cart-error">
 								Заполнить медкарту 0/2
 							</a>
@@ -219,7 +224,8 @@
 								</div>
 							</div>
 							<div class="accardion ">
-								<button class="accardion-head  --back-color no-active btn-error" data-error="standart-error">
+								<button class="accardion-head  anamnesis --back-color no-active  btn-error "
+									data-error="standart-error">
 									<span class="accardion-head-span anamnesis-info">
 										Собрать анамнез 0/4
 									</span>
@@ -232,22 +238,27 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<button class="accordion-btn  button-click">
-											гуляла под дождём
+										<button class="accordion-btn  button-click" data-indicator="anamnesis"
+											data-info="startDisease">
+											Начало болезни
 										</button>
-										<button class="accordion-btn  button-click">
-											сидела дома и пила чай с лимоном.
+										<button class="accordion-btn  button-click" data-indicator="anamnesis"
+											data-info="currentDisease">
+											Текущее лечение
 										</button>
-										<button class="accordion-btn  button-click">
-											работаю из дома и никуда не ездила. Из близких тоже никто не болеет.
+										<button class="accordion-btn  button-click" data-indicator="anamnesis"
+											data-info="epidemiologicalEnvironment">
+											Эпидемиологическое окружение
 										</button>
-										<button class="accordion-btn  button-click">
-											Нет, хронических заболеваний нет, аллергии нет.
+										<button class="accordion-btn  button-click" data-indicator="anamnesis"
+											data-info="otherDisease">
+											Другие заболевания
 										</button>
 									</div>
 								</div>
 							</div>
-							<button class="main-panel-btn --back-color no-active btn-error" data-error="standart-error">
+							<button class="button-click main-panel-btn foto-btn --back-color no-active btn-error"
+								data-error="standart-error" data-indicator="fotoBtn" data-info="fotoBtn">
 								Запросить фотографию горла 0/1
 							</button>
 							<button class="main-panel-btn --back-color no-active btn-error" data-error="standart-error">
