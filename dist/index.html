@@ -90,7 +90,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="#medical-card" class="header-btn open-modal">
+						<a href="#medical-card-1" class="header-btn open-modal">
 							Справочник
 						</a>
 					</div>
@@ -186,10 +186,12 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<button class="accordion-btn btn-error no-active" data-error="diagnoz-error">
+										<button class="accordion-btn btn-incorrect" data-indicator="diagnoz"
+											data-incorrect="incorrect-answer">
 											Вероятно, это ангина
 										</button>
-										<button class="accordion-btn">
+										<button class="accordion-btn doctor-task" data-indicator="diagnoz"
+											data-task="correct-answer">
 											Вероятно, это фарингит
 										</button>
 									</div>
@@ -202,7 +204,7 @@
 							</a>
 							<div class="accardion">
 								<button class="accardion-head recom  --back-color btn-error no-active" data-error="recom-error">
-									<span class="accardion-head-span">
+									<span class="accardion-head-span recom-box-info ">
 										Дать рекомендацию 0/2
 									</span>
 									<svg class="accardion-svg" width="14" height="8" viewBox="0 0 14 8" fill="none"
@@ -214,10 +216,12 @@
 								</button>
 								<div class="accardion-body">
 									<div class="accardion-body-wrapp ">
-										<button class="accordion-btn button-click">
+										<button class="accordion-btn doctor-task" data-indicator="recom"
+											data-task="generalRecommendations">
 											Общие рекомендации
 										</button>
-										<button class="accordion-btn  button-click">
+										<button class="accordion-btn  doctor-task" data-indicator="recom"
+											data-task="faceToFaceReception">
 											Сходить на очный приём
 										</button>
 									</div>
@@ -261,7 +265,7 @@
 								data-error="standart-error" data-indicator="fotoBtn" data-info="fotoBtn">
 								Запросить фотографию горла 0/1
 							</button>
-							<button class="main-panel-btn --back-color no-active btn-error" data-error="standart-error">
+							<button class="main-panel-btn repeat --back-color no-active btn-error" data-error="standart-error">
 								Предложить повторную консультацию
 							</button>
 		
@@ -360,20 +364,17 @@
 		</div>
 		<div class="medical-form">
 			<div class="medical-box-btn">
-				<button class="medical-form-btn complaints-form-btn active btn-error no-active  deactivate" data-tab="tab-1"
-					data-error="standart-error">
+				<button class="medical-form-btn complaints-form-btn active btn-error no-active  deactivate"
+					data-tab="tab-1">
 					Жалобы
 				</button>
-				<button class="medical-form-btn anamnesis-form-btn btn-error no-active  deactivate" data-tab="tab-2"
-					data-error="standart-error">
+				<button class="medical-form-btn anamnesis-form-btn btn-error no-active  deactivate" data-tab="tab-2">
 					Анамнез
 				</button>
-				<button class="medical-form-btn no-active  deactivate  btn-error" data-tab="tab-3"
-					data-error="standart-error">
+				<button class="medical-form-btn no-active  deactivate  btn-error" data-tab="tab-3">
 					Общий осмотр
 				</button>
-				<button class="medical-form-btn no-active diagnoz-form-btn   deactivate btn-error"
-					data-error="standart-error" data-tab="tab-4">
+				<button class="medical-form-btn no-active diagnoz-form-btn   deactivate btn-error" data-tab="tab-4">
 					Диагноз
 				</button>
 			</div>
@@ -420,6 +421,10 @@
 			</div>
 	
 		</div>
+	</div>
+	
+	<div id="medical-card-1" class="medical  mfp-hide">
+		<img src="./img/test.png" alt="">
 	</div>
 	
 	<script src="js/app.min.js"></script>
